@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>We've moved to cbt.dobronx.tech</title>
+<style>
+  :root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1c2333;
+    --muted: #5d6679;
+    --accent: #2455e6;
+    --border: #dde2ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #11141c;
+      --card: #1a1e29;
+      --text: #eef1f8;
+      --muted: #9aa3b8;
+      --accent: #6c8dff;
+      --border: #2a3040;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  main {
+    width: 100%;
+    max-width: 30rem;
+    padding: 2.25rem 2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  h1 { margin: 0 0 0.75rem; font-size: 1.5rem; line-height: 1.25; }
+  p { margin: 0 0 1.25rem; color: var(--muted); }
+  .old { text-decoration: line-through; }
+  a.btn {
+    display: inline-block;
+    padding: 0.7rem 1.25rem;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  a.btn:hover { filter: brightness(1.1); }
+  a.btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  small { display: block; margin-top: 1.25rem; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>We've moved to a new domain</h1>
+  <p>
+    <span class="old">jeecbt2.onrender.com</span> is now
+    <strong>cbt.dobronx.tech</strong>. Please use the new address from now on and update any bookmarks.
+  </p>
+  <a class="btn" href="https://cbt.dobronx.tech">Go to cbt.dobronx.tech</a>
+  <small>Redirecting automatically in <span id="s">10</span> seconds.</small>
+</main>
+<script>
+  var n = 10, el = document.getElementById("s");
+  var t = setInterval(function () {
+    n--; el.textContent = n;
+    if (n <= 0) { clearInterval(t); location.href = "https://cbt.dobronx.tech"; }
+  }, 1000);
+</script>
+<noscript><meta http-equiv="refresh" content="10;url=https://cbt.dobronx.tech"></noscript>
+</body>
+</html>
